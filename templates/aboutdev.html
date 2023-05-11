@@ -1,0 +1,37 @@
+{% extends 'base.html'%}
+{% block body %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    #landing-wrapper {
+  display: table;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({{ url_for('static', filename = '7451.jpg') }});
+  background-position: center top;
+  height: 350px;
+  color: white;
+}
+    </style>
+    {% block title %}
+Devloper -
+{% endblock title %}
+  </head>
+  <body>
+    <div id="landing-wrapper"></div>
+    <br>
+    <h1 style="text-align: center;">A python programmer who loves Scripting alot!</h1>
+    <br>
+    <center><h2 style="font-family: cursive;">check more project</h2></center>
+    <br>
+    <div class="buton" style="text-align: center;">
+    <button type="button" class="btn btn-outline-secondary" onclick='location.href="https://codeax1.herokuapp.com/"'s>Portfolio Website</button><br><br>
+    <button type="button" class="btn btn-outline-secondary" onclick='location.href="https://coursecodeax.herokuapp.com/"'>Course Website</button><br><br>
+    <button type="button" class="btn btn-outline-secondary" onclick='location.href="https://codeax.herokuapp.com/"'>Trail Website</button><br><br>
+    <button type="button" class="btn btn-outline-secondary"  onclick='location.href="https://github.com/codeavek"'>Github</button>
+
+</div>
+{% endblock body %}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T&C CodeAx1</title>
+    <link rel="stylesheet" href="/static/dark.css">
+    <style>
+        .char{
+            font-size: 40px;
+            height: 40px;
+            animation: an 1s ease-out 1 both;
+            display: inline-block;
+
+        }
+
+        @keyframes an{
+            from{
+                opacity: 0;
+                transform: perspective(500px) translate3d(-35px, -40px,
+                -150px) rotate3d(1,-3,0,35deg)
+            }
+            to{
+                opacity:1;
+                transform: perspective(500px) translate3d(0,0,0);
+
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="btn-toggle" style="  background-color: #0a7c85; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);">Dark Or Light</button>
+    <h1 style='font-family: "Times New Roman", Times, serif;'>CodeAx1 - Avek</h1>
+    <p class="char" style='font-family: "Times New Roman", Times, serif;'>Hey Guys this is avek and i have made a simple project working with flask and sqllite.<br><hr>
+    </p><h3 style='font-family: "Times New Roman", Times, serif;'>Caution:</h3><p class="char" style='font-family: "Times New Roman", Times, serif;'>This project is just a example of flask connection with dbms. <br>
+        It is open for all user, Please type your rating in title and description. <br>
+        We provided you updation button and deletation button on home, So you can update or delete your words<br>
+
+    <script src="/static/dark.js"></script>
+</body>
+</html>
+

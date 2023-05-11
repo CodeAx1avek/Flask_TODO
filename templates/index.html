@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% block title %}
+Home -
+{% endblock title %}
+{% block body %}
+<div class="container">
+  <a class="navbar-brand" href="#">Title & Desccription</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  </nav>
+  <div class="container my-3">
+    <form action="/" method="POST">
+      <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input type="text" class="form-control" name="title" id="title" aria-describedby="title">
+      </div>
+      <div class="mb-3">
+        <br>
+        <label for="Description" class="form-label">Description</label>
+        <input type="text" class="form-control" name="desc" id="description">
+      </div>
+      <button type="submit" class="btn btn-dark">Submit</button>
+    </form>
+  </div>
+  <h2">Your title & desc</h2>
+
+  {% if allTodo|length==0 %}
+  <div class="alert alert-dark" role="alert">
+    No Record in TD... Please add title & description,Personal and credential information is prohibitted.
+  </div>
+  {% else %}
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">sno</th>
+        <th scope="col">Title</th>
+        <th scope="col">Description</th>
+        <th scope="col">Time</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for todo in allTodo %}
+      <tr>
+        <th scope="row">{{loop.index}}</th>
+        <td>{{todo.title}}</td>
+        <td>{{todo.desc}}</td>
+        <td>{{todo.date_created}}</td>
+        <td>
+          <a href="./delete/{{todo.sno}}" type="button" class="btn btn-outline-dark">Delete</a>
+          <a href="./update/{{todo.sno}}" type="button" class="btn btn-outline-primary">Update</a>
+        </td>
+      </tr>
+
+      {% endfor %}
+      {% endif %}
+    </tbody>
+  </table>
+</div>
+{% endblock body %}
